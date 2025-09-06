@@ -1,0 +1,85 @@
+{
+  "name": "My First Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## For All Shortcuts\n**Double Click** to edit me. [Shortcuts]\n\n\n\n\n\n(https://docs.n8n.io/keyboard-shortcuts/)",
+        "width": 176
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -928,
+        -288
+      ],
+      "typeVersion": 1,
+      "id": "e199fccf-9f13-47dd-bf7b-968421f88e47",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -448,
+        -144
+      ],
+      "id": "163b4075-5048-46e2-8243-b85e9299f533",
+      "name": "My Manual Trigger"
+    },
+    {
+      "parameters": {
+        "sendTo": "arunneela07@gmail.com",
+        "subject": "First n8n workflow",
+        "message": "Hi Arun - I am from n8n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -240,
+        -144
+      ],
+      "id": "e7b81164-58a1-4253-9b04-5ead54ddf868",
+      "name": "Send a test email",
+      "webhookId": "f0f8b42d-1db4-4554-904c-dcb5ea7efadd",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "QEwfBcOTi007GNPw",
+          "name": "Gmail account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "My Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send a test email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "3db7fb35-77a7-4617-b0d4-7f3a996b7d3b",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "966c418c4bdf2064c6a11220324b5aba6a971e8f9fff6abb468c7d74b77d208c"
+  },
+  "id": "MRDwoP2Yg91VsE2r",
+  "tags": [
+    {
+      "name": "Learnn8n",
+      "id": "zUPZmx43JViApZos",
+      "createdAt": "2025-09-06T05:08:52.401Z",
+      "updatedAt": "2025-09-06T05:08:52.401Z"
+    }
+  ]
+}
